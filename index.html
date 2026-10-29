@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex, nofollow" />
-<title>ケントホームズ様 SUUMOフリーページ（案）</title>
+<title>ケントホームズ様（KD'STYLE）SUUMOフリーページ（案）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
-body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #f8f7f6; font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; color: #222; }
-.box { width: min(560px, calc(100% - 32px)); padding: 40px 24px; border-radius: 12px; background: #fff; text-align: center; box-shadow: 0 6px 24px rgba(0,0,0,.08); }
-h1 { margin: 0 0 8px; font-size: 22px; line-height: 1.5; }
-p { margin: 0 0 28px; font-size: 14px; color: #6b6b6b; line-height: 1.8; }
-a { display: block; margin: 12px auto 0; max-width: 320px; padding: 14px; border-radius: 999px; background: #222; color: #fff; font-weight: 700; text-decoration: none; }
-a.sp { background: #2f8cc4; }
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 32px 16px;
+  font-family: "Noto Serif JP", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", serif; color: #fff;
+  background: #3a454e url("0001/img/top-poster.jpg") center / cover no-repeat; }
+body::before { content: ""; position: fixed; inset: 0; background: rgba(40, 50, 58, .62); }
+.box { position: relative; width: min(520px, 100%); padding: 72px 28px 40px; text-align: center; }
+.house { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.house path { fill: none; stroke: rgba(255,255,255,.85); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.label { position: relative; margin: 0; font-family: "EB Garamond", serif; font-size: 14px; letter-spacing: .3em; opacity: .9; }
+h1 { position: relative; margin: 14px 0 0; font-size: clamp(22px, 5vw, 28px); font-weight: 500; letter-spacing: .1em; line-height: 1.6; }
+.lead { position: relative; margin: 14px 0 32px; font-size: 14px; line-height: 1.9; letter-spacing: .06em; opacity: .9; }
+.links { position: relative; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.links a { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 190px; padding: 22px 12px 18px;
+  background: #fff; color: #222; text-decoration: none; letter-spacing: .1em; transition: transform .2s, box-shadow .2s; }
+.links a:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,.25); }
+.links a.sp { background: #222; color: #fff; }
+.links svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width: 1.4; }
+.links strong { font-size: 17px; font-weight: 600; }
+.links small { font-family: "EB Garamond", serif; font-size: 13px; letter-spacing: .2em; opacity: .7; }
+.note { position: relative; margin: 26px 0 0; font-size: 12px; line-height: 1.8; opacity: .8; }
+.nw { display: inline-block; }
+@media (max-width: 480px) {
+  .box { padding: 104px 20px 32px; }
+  h1 { font-size: 20px; }
+  .lead { font-size: 13px; }
+  .links a { width: 100%; max-width: 260px; flex-direction: row; justify-content: center; padding: 16px 12px; gap: 12px; }
+  .links svg { width: 30px; height: 30px; }
+  .links small { display: none; }
+}
 </style></head><body>
 <div class="box">
-<h1>ケントホームズ様（KD'STYLE）<br />SUUMO フリーページ（案）</h1>
-<p>大阪・北摂〜阪神間向け、展示場・モデルハウスへの来場誘導ページの提案です。<br />実際は SUUMO の企業ページ内に表示されます。</p>
-<a href="preview/pc.html">PC版を見る</a>
-<a class="sp" href="preview/sp.html">スマホ版を見る</a>
+  <svg class="house" viewBox="0 0 520 440" preserveAspectRatio="none" aria-hidden="true"><path d="M1 72 L260 1 L519 72 V439 H1 Z" /></svg>
+  <p class="label">KD'STYLE ／ KENT HOMES</p>
+  <h1>ケントホームズ様<br /><span class="nw">SUUMO フリーページ（案）</span></h1>
+  <p class="lead"><span class="nw">建築家と建てる、完全自由設計の家。</span><br /><span class="nw">大阪・北摂〜阪神間向け、</span><span class="nw">展示場・モデルハウスへの</span><span class="nw">来場誘導ページの提案です。</span></p>
+  <div class="links">
+    <a href="preview/pc.html"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="8" width="30" height="20" rx="1.5" /><path d="M15 33 H25 M20 28 V33" /></svg><strong>PC版を見る</strong><small>DESKTOP</small></a>
+    <a class="sp" href="preview/sp.html"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="12" y="5" width="16" height="30" rx="2.5" /><path d="M18 31 H22" /></svg><strong>スマホ版を見る</strong><small>SMARTPHONE</small></a>
+  </div>
+  <p class="note">実際は SUUMO の企業ページ内に表示されます。<br />「要確認」の箇所はケントホームズ様に確認のうえ差し替えます。</p>
 </div>
 </body></html>
