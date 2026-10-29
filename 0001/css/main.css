@@ -12,7 +12,8 @@
   --kd-blue-soft: #e8f3fa;
   --kd-todo: #c0392b;
   color: var(--kd-ink);
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", YuGothic, Meiryo, sans-serif;
+  /* トップビジュアル（ケントホームズ公式トップ）に合わせ、全体を明朝体に。英字・数字は EB Garamond */
+  font-family: "Noto Serif JP", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", serif;
   line-height: 1.8;
   text-align: left;
   -webkit-text-size-adjust: 100%;
@@ -22,7 +23,7 @@
 #includeContent .kd ul, #includeContent .kd ol { list-style: none; }
 #includeContent .kd img { display: block; max-width: 100%; height: auto; border: 0; }
 #includeContent .kd a { color: var(--kd-blue); }
-#includeContent .kd .kd-en { font-family: "Josefin Sans", "Noto Sans JP", sans-serif; letter-spacing: .06em; }
+#includeContent .kd .kd-en { font-family: "EB Garamond", "Noto Serif JP", serif; letter-spacing: .08em; }
 #includeContent .kd .kd-center { text-align: center !important; }
 #includeContent .kd .kd-nowrap { white-space: nowrap; }
 #includeContent .kd .kd-todo { display: inline-block; margin-left: 4px; padding: 0 6px; border: 1px solid var(--kd-todo); border-radius: 3px; color: var(--kd-todo); font-size: 11px; font-style: normal; font-weight: 700; line-height: 1.7; vertical-align: middle; }
@@ -33,13 +34,13 @@
 /* セクション共通 */
 #includeContent .kd .kd-sec { padding: 64px 0; }
 #includeContent .kd .kd-sec--gray { background: var(--kd-bg); }
-#includeContent .kd .kd-h-en { text-align: center !important; font-size: 13px; letter-spacing: .3em; color: var(--kd-blue); }
-#includeContent .kd .kd-h { margin: 6px 0 24px; text-align: center !important; font-size: 26px; font-weight: 700; line-height: 1.5; letter-spacing: .04em; }
+#includeContent .kd .kd-h-en { text-align: center !important; font-size: 15px; letter-spacing: .3em; color: var(--kd-blue); }
+#includeContent .kd .kd-h { margin: 6px 0 24px; text-align: center !important; font-size: 26px; font-weight: 600; line-height: 1.5; letter-spacing: .04em; }
 
 /* ボタン */
 #includeContent .kd .kd-btn {
   display: inline-block; padding: 16px 28px; border-radius: 999px;
-  font-size: 15px; font-weight: 700; line-height: 1.4; text-align: center !important; text-decoration: none;
+  font-size: 15px; font-weight: 600; line-height: 1.4; letter-spacing: .06em; text-align: center !important; text-decoration: none;
   transition: opacity .2s, background-color .2s;
 }
 #includeContent .kd .kd-btn::after { content: ""; display: inline-block; width: 7px; height: 7px; margin-left: 10px; border-top: 2px solid currentColor; border-right: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); }
@@ -150,7 +151,7 @@
 #includeContent .kd .kd-money { margin-top: 28px; }
 #includeContent .kd .kd-money { counter-reset: kdm; }
 #includeContent .kd .kd-money li { counter-increment: kdm; padding: 18px 0 8px; border-top: 1px solid var(--kd-ink); }
-#includeContent .kd .kd-money li::before { content: "0" counter(kdm); display: block; font-family: "Josefin Sans", sans-serif; font-size: 13px; letter-spacing: .1em; color: var(--kd-blue); }
+#includeContent .kd .kd-money li::before { content: "0" counter(kdm); display: block; font-family: "EB Garamond", "Noto Serif JP", serif; font-size: 13px; letter-spacing: .1em; color: var(--kd-blue); }
 #includeContent .kd .kd-money__title { margin: 2px 0 8px; font-size: 17px; font-weight: 700; line-height: 1.4; }
 #includeContent .kd .kd-money__big { font-size: 15px; }
 
@@ -167,7 +168,7 @@
 #includeContent .kd .kd-map__svg { display: block; width: 100%; height: auto; border-radius: 6px; }
 #includeContent .kd .kd-map__sea { fill: #dcebf5; }
 #includeContent .kd .kd-map__land path { fill: #fbf8f2; stroke: #c8d9e6; stroke-width: 14; stroke-linejoin: round; paint-order: stroke; }
-#includeContent .kd .kd-map__label { font-family: "Noto Sans JP", sans-serif; font-weight: 700; text-anchor: middle; letter-spacing: .2em; }
+#includeContent .kd .kd-map__label { font-family: "Noto Serif JP", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", serif; font-weight: 600; text-anchor: middle; letter-spacing: .2em; }
 #includeContent .kd .kd-map__label--area { fill: #c3b9a8; font-size: 30px; }
 #includeContent .kd .kd-map__label--island { fill: #c3b9a8; font-size: 24px; }
 #includeContent .kd .kd-map__label--sea { fill: #9dbdd3; font-size: 26px; font-weight: 500; letter-spacing: .4em; }
