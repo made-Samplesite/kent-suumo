@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta name="robots" content="noindex, nofollow" /><base target="_top" /><meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>確認用（スマホ）</title>
+<style>
+body { margin: 0; background: #e9e9e9; font-family: sans-serif; }
+.pv-bar { padding: 8px 12px; background: #444; color: #fff; font-size: 12px; text-align: center; }
+/* SUUMO の実寸：PC は #wrapper 954px の中に本文 950px、スマホは画面幅いっぱい */
+.pv-page { width: 100%; margin: 0 auto; padding: 0; background: #fff; }
+</style>
+</head><body>
+<div class="pv-bar">確認用プレビュー（実際は SUUMO の企業ページ内に表示されます）</div>
+<div class="pv-page">
+<!--
+  ケントホームズ様（ケンデザイン設計 KD'STYLE）SUUMO フリーページ（スマホ用・src/pc.html から自動生成）
+  SUUMO の企業ページ（PC）の「contents Start」の位置に入る部分。外枠 #kosha_free ごと入稿する（スマホは #includeContent が無い）。
+  ../0001/smp/ は書き出し時に置き換わる（入稿用：/house/hj/report/kigyo_spc/front/<企業コード>/0001/ ／プレビュー用：../0001/）
+  MODEL（波かっこ付き）はモデルハウス一覧（SUUMO）、MAP は src/parts/map.svg（tools/make-map.py で作成）に置き換わる
+  動きは js/main.js（jQuery を使わない素の JavaScript。SUUMO の PC は jQuery 1.4 系のため、jQuery に頼らない）
+  「要確認」タグの箇所は、ケントホームズ様に確認して差し替える（内容は README.md の未確定一覧）
+-->
+<div id="kosha_free">
+<link rel="stylesheet" type="text/css" href="../0001/smp/css/main.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<div class="kd">
+
+  <!-- 1. ファーストビュー：ケントホームズ公式トップの構成を踏襲（背景動画＋家形の線＋明朝のコピー＋リボン型の数値） -->
+  <div class="kd-top">
+    <video class="kd-top__bg" autoplay muted loop playsinline preload="metadata" poster="../0001/smp/img/top-poster.jpg" aria-hidden="true">
+      <source src="../0001/smp/img/top.mp4" type="video/mp4" />
+    </video>
+    <div class="kd-top__inner">
+      <svg class="kd-top__house" viewBox="0 0 520 440" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M1 72 L260 1 L519 72 V439 M1 72 V439" /></svg>
+      <p class="kd-top__lead kd-serif">性能<span>&times;</span>デザイン</p>
+      <p class="kd-top__title kd-serif">建築家と建てる、<br />完全自由設計の家</p>
+      <p class="kd-top__sub kd-serif"><span>数値が証明するその実力</span></p>
+      <p class="kd-top__area kd-serif">大阪の狭い土地でも、<br class="kd-sp" />プライバシーと開放感を。</p>
+      <ul class="kd-top__ribbons">
+        <li><span class="kd-serif">C値</span><strong class="kd-serif">0.25<small>cm²/m²</small></strong></li>
+        <li><span class="kd-serif">UA値</span><strong class="kd-serif">0.26<small>W/m²K</small></strong></li>
+      </ul>
+    </div>
+    <p class="kd-top__note">※UA値はPREMIUM G3（断熱等級7）の数値。間取りにより性能値が異なります。</p>
+  </div>
+  <div class="kd-top-tit">
+    <p class="kd-serif">全棟、許容応力度計算による<br class="kd-sp" />耐震等級3。<br class="kd-sp" />私たちの標準仕様です。</p>
+  </div>
+  <div class="kd-fv">
+    <div class="kd-cta">
+      <a class="kd-btn kd-btn--main" href="https://suumo.jp/chumon/koumuten/rn_kenth/model/">展示場・モデルハウスを見学する</a>
+      <a class="kd-link" href="#kd-stores" data-kd-jump>お近くの展示場を地図で探す</a>
+    </div>
+  </div>
+
+  <!-- 2. 共感 -->
+  <div class="kd-sec kd-sec--gray">
+    <div class="kd-inr">
+      <p class="kd-h-en kd-en">YOUR WORRIES</p>
+      <p class="kd-h">土地の条件で、<br class="kd-sp" />理想の家をあきらめていませんか。</p>
+      <ul class="kd-worry">
+        <li>隣の家が近くて、カーテンを開けられない家になりそう</li>
+        <li>狭小地・変形地だと、建てられる家が限られると思っている</li>
+        <li>土地代が高く、建物にかけられる予算が残るか不安</li>
+        <li>大手メーカーのプランが、敷地にも暮らしにもしっくりこない</li>
+        <li>デザイン住宅は高そうで、性能もどこまで本当か分からない</li>
+      </ul>
+      <p class="kd-worry__answer">その不安の多くは、<span>設計で解けます。</span></p>
+    </div>
+  </div>
+
+  <!-- 3. 設計力で解く -->
+  <div id="kd-design" class="kd-sec">
+    <div class="kd-inr">
+      <p class="kd-h-en kd-en">DESIGN</p>
+      <p class="kd-h">敷地の弱点を、設計で強みに変える。</p>
+      <p class="kd-text kd-center">一級建築士事務所だからできる、敷地と暮らしに合わせた完全自由設計。<br class="kd-pc" />大手ハウスメーカーでは実現が難しい間取りにも対応します。</p>
+
+      <div class="kd-feature">
+        <div class="kd-feature__img"><img src="../0001/smp/img/coat-court.jpg" alt="外からは見えない中庭のデッキ。室内から光と風が入る" width="900" height="600" /></div>
+        <div class="kd-feature__body">
+          <p class="kd-feature__label kd-en">Coat Ps ／ コート プライベートスペース</p>
+          <p class="kd-feature__title">外に閉じて、内に開く。<br />中庭のある都市型住宅。</p>
+          <p class="kd-text">庭らしい庭をつくることが難しい都心部でも、家族だけのプライベート空間＝中庭を持つことで、人目を気にしない暮らしを実現。中庭から自然な光が差し込み、部屋の中を明るく照らします。道路に面した庭と比べて、防犯面でも安心です。</p>
+        </div>
+      </div>
+
+      <ul class="kd-points">
+        <li>
+          <img src="../0001/smp/img/coat-window.jpg" alt="中庭へ大きな窓で出入りできるリビング" width="900" height="600" />
+          <p class="kd-points__num kd-en">POINT 01</p>
+          <p class="kd-points__title">プライバシーと自然光を両立</p>
+          <p class="kd-points__text">外から見えない中庭は、BBQやプール遊びにも使える家族だけの空間。大きな窓から陽の光もたっぷり取り込みます。</p>
+        </li>
+        <li>
+          <img src="../0001/smp/img/coat-aerial.jpg" alt="異素材を組み合わせた外壁の住宅（イメージ）" width="900" height="600" />
+          <p class="kd-points__num kd-en">POINT 02</p>
+          <p class="kd-points__title">洗練されたデザイン</p>
+          <p class="kd-points__text">シンプルモダンをベースに、異素材をミックスした外壁デザインが得意です。暮らしやすさとおしゃれさを両立します。</p>
+        </li>
+        <li>
+          <img src="../0001/smp/img/coat-roof.jpg" alt="家族や友人とくつろげるルーフバルコニー" width="900" height="600" />
+          <p class="kd-points__num kd-en">POINT 03</p>
+          <p class="kd-points__title">ハウスメーカーにはない自由度</p>
+          <p class="kd-points__text">家事ラク動線、フロアづくり、スカイバルコニーなど、空間設計にこだわった間取りをご提案します。</p>
+        </li>
+      </ul>
+
+      <div class="kd-more">
+        <a class="kd-more__btn" href="#kd-more-design" data-kd-more>設計の工夫を、実例でもっと見る</a>
+        <div class="kd-more__body" id="kd-more-design">
+          <p class="kd-more__lead">敷地の条件に合わせた、設計の工夫の一例です。</p>
+          <ul class="kd-cases">
+            <li>
+              <img src="../0001/smp/img/work-2064.jpg" alt="内と外が心地よくつながる中庭の家" width="626" height="420" />
+              <p class="kd-cases__title">内と外が心地よくつながる中庭の家</p>
+              <p class="kd-tags">#コートハウス #中庭 #吹き抜け</p>
+            </li>
+            <li>
+              <img src="../0001/smp/img/work-1867.jpg" alt="プライバシー重視のバルコニー付き！全館空調で快適なお家" width="626" height="420" />
+              <p class="kd-cases__title">プライバシー重視のバルコニー付き。全館空調で快適な家</p>
+              <p class="kd-tags">#バルコニー #全館空調</p>
+            </li>
+            <li>
+              <img src="../0001/smp/img/coat-doma.jpg" alt="モールテックス仕上げの通り土間からデッキスペースへつながる" width="900" height="600" />
+              <p class="kd-cases__title">通り土間から、LDK中心のデッキへ</p>
+              <p class="kd-tags">#通り土間 #デッキ #モールテックス</p>
+            </li>
+          </ul>
+          <p class="kd-note">敷地条件と間取り図を添えた大阪・兵庫の実例に差し替え予定 <em class="kd-todo">要確認</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kd-midcta">
+    <a class="kd-midcta__link" href="https://suumo.jp/chumon/koumuten/rn_kenth/model/"><span>中庭のある暮らしを、展示場で体感してみませんか。</span>展示場・モデルハウスを見学する</a>
+  </div>
+
+  <!-- 4. 性能の裏付け -->
+  <div id="kd-spec" class="kd-sec kd-sec--gray">
+    <div class="kd-inr">
+      <p class="kd-h-en kd-en">PERFORMANCE</p>
+      <p class="kd-h">建築家の家だからこそ、<br class="kd-sp" />性能は数字で約束します。</p>
+      <p class="kd-text kd-center">C値0.25は、全棟で目指す気密の基準です。<br class="kd-pc" />デザインのために、性能を犠牲にしません。</p>
+      <div class="kd-grade">
+        <table class="kd-grade__table">
+          <thead>
+            <tr>
+              <th class="kd-grade__corner"></th>
+              <th><img src="../0001/smp/img/grade-g3.jpg" alt="PREMIUM G3 の住宅" width="790" height="520" /><span class="kd-grade__name kd-en">PREMIUM G3</span><span class="kd-grade__sub">ハイグレード（断熱等級7）</span></th>
+              <th><img src="../0001/smp/img/grade-g2.jpg" alt="PREMIUM G2 の住宅" width="790" height="520" /><span class="kd-grade__name kd-en">PREMIUM G2</span><span class="kd-grade__sub">一番人気のフラッグシップ（断熱等級6）</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>UA値</th><td data-label="PREMIUM G3"><strong class="kd-en">0.26</strong>（HEAT20 G3）</td><td data-label="PREMIUM G2"><strong class="kd-en">0.46</strong>（HEAT20 G2）</td></tr>
+            <tr><th>C値</th><td data-label="PREMIUM G3"><strong class="kd-en">0.25</strong></td><td data-label="PREMIUM G2"><strong class="kd-en">0.25</strong></td></tr>
+            <tr><th>耐震</th><td data-label="PREMIUM G3">耐震等級3＋許容応力度計算＋制震ダンパー</td><td data-label="PREMIUM G2">耐震等級3＋許容応力度計算＋制震ダンパー</td></tr>
+            <tr><th>窓</th><td data-label="PREMIUM G3">樹脂サッシ APW430</td><td data-label="PREMIUM G2">樹脂サッシ APW330</td></tr>
+            <tr><th>断熱</th><td data-label="PREMIUM G3">W断熱「凄断熱」</td><td data-label="PREMIUM G2">W断熱「凄断熱」</td></tr>
+            <tr><th>換気</th><td data-label="PREMIUM G3">第1種換気 SUMIKA VS90</td><td data-label="PREMIUM G2">第1種換気 SUMIKA VS90</td></tr>
+            <tr><th>補助金</th><td data-label="PREMIUM G3">GX補助金160万円対応※</td><td data-label="PREMIUM G2">GX補助金160万円対応※</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="kd-note">性能値はケンデザイン設計（KD'STYLE）公式サイトの商品ラインナップより。※GX補助金の適用条件・期限 <em class="kd-todo">要確認</em></p>
+
+      <div class="kd-more">
+        <a class="kd-more__btn" href="#kd-more-spec" data-kd-more>性能の中身を、もっと詳しく見る</a>
+        <div class="kd-more__body" id="kd-more-spec">
+          <dl class="kd-specs">
+            <div><dt>耐震等級3を、計算で確かめる</dt><dd>全棟で許容応力度計算を実施。最高等級の耐震等級3に、制震ダンパーを組み合わせ、繰り返す揺れにも備えます。</dd></div>
+            <div><dt>W断熱「凄断熱」</dt><dd>外と内の2重の断熱で、家じゅうの温度差を小さく。夏も冬も、エアコンに頼りすぎない快適さを目指します。</dd></div>
+            <div><dt>高性能樹脂サッシ</dt><dd>熱が逃げやすい窓に、樹脂サッシ（APW430／APW330）を採用しています。</dd></div>
+            <div><dt>第1種換気</dt><dd>給気・排気とも機械で行う第1種換気（SUMIKA VS90）で、外の温度に左右されにくい空気環境に。</dd></div>
+            <div><dt>長期優良住宅が標準</dt><dd>国の基準に基づく長期優良住宅を標準とし、長く安心して暮らせる住まいをつくります。</dd></div>
+          </dl>
+          <p class="kd-text">「温度差のない快適さ」は、伊丹のまちかどモデルハウス<span class="kd-nowrap">「温度差が生まれないデザインハウス」</span>で体感できます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. お金 -->
+  <div id="kd-money" class="kd-sec">
+    <div class="kd-inr">
+      <p class="kd-h-en kd-en">COST</p>
+      <p class="kd-h">気になるお金の話を、<br class="kd-sp" />先にオープンにします。</p>
+      <p class="kd-text kd-center">設計事務所の品質を、手の届く価格で。<br class="kd-pc" />「デザイン住宅はどうせ高い」とあきらめる前に、ご確認ください。</p>
+      <ul class="kd-money">
+        <li>
+          <p class="kd-money__title">本体価格の目安</p>
+          <p class="kd-text">坪単価または本体価格の目安を掲載します。 <em class="kd-todo">要確認</em></p>
+        </li>
+        <li>
+          <p class="kd-money__title">GX補助金 160万円</p>
+          <p class="kd-text">国の「GX志向型住宅」の補助制度に対応。断熱・省エネなどの基準を満たす住まいが対象です。 <em class="kd-todo">要確認</em></p>
+        </li>
+        <li>
+          <p class="kd-money__title">光熱費まで含めて考える</p>
+          <p class="kd-text">高断熱・高気密の家は、毎月の光熱費を抑えられます。建てた後のランニングコストまで含めて比べることをおすすめします。</p>
+        </li>
+        <li>
+          <p class="kd-money__title">総額で資金計画を</p>
+          <p class="kd-text">土地＋建物＋諸費用の総額で、無理のない資金計画を。展示場では、資金計画・住宅ローンのシミュレーションや土地探しのご相談もできます。</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="kd-midcta">
+    <a class="kd-midcta__link" href="https://suumo.jp/chumon/koumuten/rn_kenth/model/"><span>資金計画のご相談も、展示場で承ります。</span>展示場・モデルハウスを見学する</a>
+  </div>
+
+  <!-- 6. 実例 -->
+  <div id="kd-works" class="kd-sec kd-sec--gray">
+    <div class="kd-inr">
+      <p class="kd-h-en kd-en">WORKS</p>
+      <p class="kd-h">建築実例</p>
+      <ul class="kd-works">
+        <li><img src="../0001/smp/img/work-2064.jpg" alt="内と外が心地よくつながる中庭の家" width="626" height="420" /><p class="kd-works__title">内と外が心地よくつながる中庭の家</p><p class="kd-tags">#コートハウス #中庭 #吹き抜け</p></li>
+        <li><img src="../0001/smp/img/work-1345.jpg" alt="光と影を愉しむ家" width="626" height="420" /><p class="kd-works__title">光と影を愉しむ家</p><p class="kd-tags">#外観デザイン #塗り壁</p></li>
+        <li><img src="../0001/smp/img/work-1348.jpg" alt="家の中心にデッキを設けた平屋暮らし" width="626" height="420" /><p class="kd-works__title">家の中心にデッキを設けた平屋暮らし</p><p class="kd-tags">#平屋</p></li>
+        <li><img src="../0001/smp/img/work-1867.jpg" alt="プライバシー重視のバルコニー付き！全館空調で快適なお家" width="626" height="420" /><p class="kd-works__title">プライバシー重視のバルコニー付き。全館空調で快適な家</p><p class="kd-tags">#全館空調</p></li>
+        <li><img src="../0001/smp/img/work-1354.jpg" alt="飽きが少ないラグジュアリー空間" width="626" height="420" /><p class="kd-works__title">飽きが少ないラグジュアリー空間</p><p class="kd-tags">#ラグジュアリー</p></li>
+        <li><img src="../0001/smp/img/work-1353.jpg" alt="カフェテイストのナチュラルな家" width="626" height="420" /><p class="kd-works__title">カフェテイストのナチュラルな家</p><p class="kd-tags">#カフェテイスト</p></li>
+      </ul>
+      <div class="kd-voice">
+        <p class="kd-voice__title">お客様の声</p>
+        <p class="kd-text kd-center">「敷地の悩み → 設計での解決 → 住んでみての感想」の流れで2〜3件掲載予定 <em class="kd-todo">要確認</em></p>
+      </div>
+      <p class="kd-area">施工エリア：箕面市・豊中市・吹田市・池田市・茨木市・伊丹市・宝塚市・西宮市 ほか <em class="kd-todo">要確認</em></p>
+    </div>
+  </div>
+
+  <!-- 7. 店舗マップ（地図かタブで拠点を選ぶ） -->
+  <div id="kd-stores" class="kd-sec">
+    <div class="kd-inr">
+      <p class="kd-h-en kd-en">SHOWROOM</p>
+      <p class="kd-h">お近くの展示場・拠点を選ぶ</p>
+      <p class="kd-text kd-center">地図の地名か、下のボタンを押すと拠点の情報に切り替わります。</p>
+      <div class="kd-map" data-kd-map>
+        <div class="kd-map__figure">
+<svg class="kd-map__svg" viewBox="0 0 947 954" role="img" aria-label="KD'STYLE・ケントホームズの拠点（大阪府箕面市・兵庫県伊丹市・西宮市・徳島県）の地図" xmlns="http://www.w3.org/2000/svg">
+<rect class="kd-map__sea" width="947" height="954" />
+<g class="kd-map__land" transform="translate(0.000000,954.000000) scale(0.100000,-0.100000)">
+<path d="M0 8479 c0 -1060 0 -1060 23 -1054 46 14 53 10 77 -51 26 -63 54 -81
+101 -65 15 5 30 7 32 4 5 -4 87 -13 131 -14 45 0 168 166 152 207 -4 11 41 82
+84 132 16 18 46 15 67 -6 27 -28 51 -33 88 -18 27 11 37 12 52 2 33 -23 50
+-25 79 -9 72 37 122 51 141 38 33 -22 50 -24 79 -8 16 9 47 17 68 18 29 2 47
+11 69 35 28 30 29 31 55 14 15 -10 43 -16 65 -16 56 3 74 -11 94 -74 23 -73
+44 -82 116 -53 29 12 64 34 79 50 25 25 31 26 62 17 29 -9 41 -7 75 10 23 12
+41 20 41 17 0 -2 29 7 65 20 65 25 65 25 86 0 12 -13 36 -27 52 -31 17 -3 47
+-15 67 -25 48 -25 100 -10 137 40 35 46 44 52 68 44 11 -4 33 -8 48 -9 16 -1
+37 -10 47 -19 25 -23 72 -22 85 0 36 63 53 64 170 8 56 -27 78 -32 112 -28 52
+6 92 -11 99 -42 4 -13 15 -29 25 -36 10 -7 23 -26 28 -41 7 -17 25 -33 47 -42
+41 -17 140 -80 167 -107 23 -22 79 -47 107 -47 36 0 61 -35 49 -69 -22 -61 12
+-115 90 -145 58 -22 99 -14 113 24 12 35 32 44 52 24 14 -13 13 -20 -4 -64
+-26 -66 -16 -96 37 -106 25 -5 49 -19 71 -43 47 -51 117 -52 163 -3 39 41 76
+22 151 -78 22 -29 41 -40 100 -57 109 -32 318 -196 318 -249 0 -13 7 -41 15
+-60 8 -20 13 -40 10 -45 -3 -4 1 -23 8 -41 11 -28 11 -38 0 -65 -14 -35 -4
+-82 19 -84 7 0 22 -3 33 -5 11 -3 34 -5 50 -5 84 0 90 -26 19 -94 -63 -61 -92
+-99 -129 -167 -14 -26 -39 -66 -55 -90 -17 -24 -42 -60 -55 -80 -14 -21 -29
+-38 -33 -38 -5 0 -23 -20 -40 -44 -18 -25 -42 -48 -55 -52 -74 -22 -149 -67
+-158 -93 -14 -39 -50 -54 -90 -37 -44 19 -68 9 -85 -34 -17 -41 -48 -61 -79
+-50 -51 18 -82 -22 -59 -78 14 -34 10 -61 -10 -63 -6 -1 -15 -2 -21 -4 -5 -1
+-18 -3 -28 -3 -27 -3 -37 -41 -21 -81 17 -42 18 -36 -11 -64 -14 -13 -27 -37
+-29 -53 -2 -16 -4 -32 -5 -36 -2 -14 -82 -108 -100 -118 -12 -6 -29 -7 -43 -1
+-14 5 -35 4 -53 -2 -30 -11 -125 -100 -125 -118 0 -6 -15 -24 -34 -42 -19 -18
+-39 -50 -46 -72 -26 -84 -83 -201 -110 -225 -16 -14 -34 -43 -40 -65 -36 -118
+-72 -186 -108 -203 -39 -18 -37 -13 -112 -222 -64 -174 -104 -249 -145 -266
+-18 -7 -40 -22 -47 -32 -23 -33 -56 -45 -87 -32 -29 12 -84 22 -115 21 -10 0
+-31 -11 -45 -24 -14 -14 -36 -30 -49 -36 -38 -20 -126 -216 -113 -253 6 -17 8
+-41 5 -54 -12 -47 5 -95 37 -106 32 -11 37 -23 43 -117 6 -77 9 -81 77 -87 86
+-8 96 -12 107 -43 6 -17 20 -31 35 -35 35 -8 42 -35 17 -68 -50 -67 -44 -113
+17 -124 117 -21 176 -87 182 -202 2 -34 124 -26 185 13 37 24 134 44 167 35
+84 -24 221 38 315 145 59 67 156 133 229 155 22 7 49 19 60 26 11 6 55 26 97
+44 42 17 93 44 112 59 19 15 61 35 93 45 218 63 334 109 349 138 7 14 20 28
+28 31 8 3 19 22 26 41 6 20 15 36 18 37 4 0 23 2 42 4 72 7 118 102 84 172
+-37 74 -88 75 -142 2 -18 -24 -37 -49 -42 -56 -7 -9 -24 -5 -67 18 -133 69
+-188 114 -197 161 -2 13 -11 53 -20 90 -13 58 -13 73 -2 100 24 57 1 88 -68
+93 -44 4 -43 3 -61 21 -8 9 -13 24 -10 33 21 66 21 277 0 311 -2 3 1 35 7 71
+10 57 13 92 17 165 1 12 24 51 52 87 47 62 71 80 109 83 8 0 23 2 33 3 27 2
+37 40 21 79 -13 31 -12 34 20 70 19 20 41 54 49 75 9 20 20 37 24 38 88 7 135
+61 120 137 -7 38 17 79 61 101 47 25 86 67 101 110 6 19 22 48 34 65 33 44 47
+88 57 185 11 103 40 153 103 174 33 11 43 20 53 51 8 20 28 56 46 79 37 47 43
+131 15 199 -32 75 39 126 87 63 47 -60 195 25 167 97 -14 37 -121 75 -172 61
+-75 -20 -84 17 -21 85 29 31 31 32 65 17 21 -9 56 -13 88 -11 30 2 66 -2 85
+-10 40 -17 61 -10 94 28 19 23 40 33 95 44 38 8 86 25 105 39 45 30 106 46
+172 44 37 -1 69 5 103 21 35 16 72 23 125 25 134 4 191 35 169 91 -12 32 55
+188 87 202 39 18 55 -7 48 -76 -10 -97 51 -179 138 -187 18 -1 45 -8 61 -14
+36 -14 74 1 87 34 11 28 -1 70 -21 77 -10 3 -15 18 -18 64 -1 10 -99 113 -135
+142 -15 12 -5 60 13 63 3 1 20 2 36 4 45 4 85 23 85 39 0 30 28 46 60 34 17
+-5 37 -8 45 -4 28 10 44 -19 32 -61 -14 -52 -2 -112 25 -122 18 -6 53 -3 176
+15 35 5 58 40 47 73 -8 26 10 43 46 47 55 4 106 30 113 58 4 17 17 28 43 36
+21 7 44 19 51 28 12 16 114 33 131 23 4 -4 14 -16 20 -29 7 -13 25 -28 41 -34
+21 -7 32 -20 43 -51 12 -38 40 -63 90 -80 4 -1 10 -16 13 -32 3 -16 14 -38 24
+-47 17 -16 18 -21 6 -50 -16 -39 -7 -73 22 -83 30 -9 35 -36 13 -66 -24 -33
+-27 -45 -17 -87 21 -87 164 -44 195 58 6 22 15 40 19 41 4 0 15 2 25 4 11 2
+28 -8 40 -22 12 -13 36 -31 54 -38 74 -31 55 -104 -20 -76 -70 27 -173 -87
+-144 -159 5 -14 9 -37 8 -52 -1 -14 3 -38 9 -52 8 -21 6 -29 -12 -45 -27 -26
+-27 -69 1 -91 15 -10 24 -30 27 -57 3 -22 10 -74 18 -115 7 -41 9 -83 6 -94
+-18 -51 16 -74 110 -74 40 0 64 -5 74 -16 20 -19 21 -16 -11 -51 -16 -16 -40
+-44 -55 -62 -27 -32 -27 -32 -63 -12 -49 26 -72 17 -101 -41 -13 -27 -32 -57
+-42 -67 -9 -10 -25 -28 -34 -39 -15 -18 -22 -20 -43 -12 -40 15 -74 2 -101
+-42 -14 -21 -32 -42 -40 -45 -43 -16 -35 -96 10 -107 14 -3 26 -11 27 -16 4
+-45 0 -72 -15 -104 -10 -21 -19 -53 -21 -73 -3 -46 -18 -59 -73 -62 -7 -1 -20
+-18 -29 -38 -20 -49 -18 -47 -66 -49 -84 -4 -128 -43 -108 -96 21 -57 21 -77
+2 -95 -10 -10 -24 -35 -31 -56 -6 -21 -20 -46 -30 -55 -9 -9 -23 -33 -29 -53
+-19 -59 -125 -87 -176 -48 -13 11 -28 19 -33 19 -5 0 -9 25 -8 54 1 65 -5 73
+-68 85 -28 5 -58 19 -75 35 -22 21 -44 31 -83 35 -3 1 -11 15 -17 31 -20 60
+-70 60 -136 -1 -22 -20 -53 -48 -69 -61 -34 -29 -38 -71 -8 -99 19 -17 20 -22
+8 -51 -37 -90 74 -120 125 -33 40 67 96 86 127 44 7 -10 29 -21 50 -24 98 -16
+95 -15 88 -46 -8 -41 9 -78 41 -90 36 -13 43 -27 31 -55 -12 -25 -41 -39 -59
+-29 -6 4 -31 1 -56 -5 -53 -15 -67 -40 -48 -87 16 -39 4 -61 -39 -69 -36 -6
+-91 -50 -112 -90 -26 -47 -64 -66 -111 -56 -47 11 -78 1 -85 -26 -5 -19 -2
+-29 30 -80 17 -29 -14 -56 -87 -78 -30 -9 -73 -25 -94 -35 -34 -18 -61 -21
+-145 -18 -13 1 -40 -10 -60 -24 -20 -14 -53 -28 -73 -31 -21 -4 -47 -19 -65
+-37 -51 -54 -77 -62 -122 -39 -33 17 -44 19 -68 9 -16 -6 -41 -11 -56 -10 -45
+2 -135 -37 -162 -72 -48 -62 -57 -69 -78 -64 -68 18 -122 -88 -93 -181 17 -54
+17 -54 -11 -93 -58 -85 -31 -133 74 -130 82 2 117 -11 131 -49 6 -17 33 -44
+70 -69 75 -51 89 -73 62 -98 -56 -52 -17 -107 74 -104 52 1 66 -9 71 -49 2
+-18 15 -43 29 -56 27 -25 32 -53 14 -85 -53 -100 19 -195 117 -154 50 21 61
+19 87 -12 12 -15 39 -44 60 -66 42 -42 49 -87 23 -148 -15 -38 -9 -65 23 -91
+25 -21 19 -42 -19 -58 -16 -7 -42 -22 -59 -35 -25 -17 -40 -21 -74 -17 -83 10
+-236 7 -248 -5 -17 -17 -14 -65 5 -79 9 -6 19 -24 22 -40 3 -15 7 -31 10 -35
+10 -17 -29 -40 -55 -33 -64 18 -89 6 -96 -47 -7 -59 -35 -106 -74 -125 -20
+-11 -43 -27 -51 -37 -17 -20 -39 -25 -113 -28 -94 -4 -117 -26 -91 -88 13 -31
+56 -56 80 -47 7 3 25 -5 39 -16 28 -22 49 -24 131 -13 40 5 63 1 115 -18 35
+-13 76 -23 91 -21 29 3 58 -18 58 -41 0 -12 12 -23 58 -51 2 -1 5 -14 8 -30 3
+-16 17 -41 32 -55 53 -50 29 -132 -44 -150 -66 -17 -80 -71 -27 -106 76 -50
+-13 -147 -144 -157 -34 -3 -52 -10 -66 -27 -15 -19 -28 -23 -82 -23 -80 -1
+-87 -8 -94 -89 -1 -4 -17 -15 -36 -23 -45 -18 -51 -62 -14 -97 14 -13 18 -25
+12 -40 -12 -38 -6 -69 21 -94 32 -29 32 -32 2 -76 -13 -19 -27 -43 -30 -53 -3
+-11 -19 -26 -34 -35 -36 -20 -44 -49 -25 -86 8 -15 17 -39 20 -53 2 -13 13
+-39 23 -56 16 -26 17 -33 6 -50 -40 -59 -239 -54 2094 -54 l2120 0 0 4770 0
+4770 -4735 0 -4735 0 0 -1061z M770 6715 c-14 -8 -40 -21 -57 -30 -47 -22 -48
+-66 -5 -103 53 -46 83 -47 139 -6 20 14 23 14 42 -5 19 -19 19 -20 1 -82 -11
+-35 -18 -65 -15 -67 2 -2 -2 -20 -9 -40 -37 -103 108 -137 150 -35 15 35 76
+120 100 138 61 46 16 150 -53 124 -35 -13 -52 -1 -70 53 -19 54 -46 73 -85 60
+-26 -9 -63 -8 -93 1 -11 4 -31 0 -45 -8z M2004 3196 c-56 -26 -67 -37 -83 -88
+-14 -42 -28 -50 -71 -38 -41 12 -65 2 -120 -50 -39 -36 -51 -42 -101 -45 -81
+-6 -106 -18 -114 -54 -3 -17 -4 -34 -1 -39 6 -11 -5 -26 -28 -39 -13 -7 -40
+-4 -100 13 -44 13 -96 24 -114 24 -23 0 -41 8 -58 28 -43 45 -131 40 -177 -10
+-19 -21 -40 -38 -47 -38 -15 0 -60 -34 -114 -87 -24 -23 -56 -45 -72 -48 -16
+-3 -46 -12 -66 -20 -26 -9 -49 -10 -75 -4 -21 5 -52 9 -69 9 -20 0 -53 15 -90
+41 -33 22 -75 51 -94 64 -70 49 -72 53 -36 87 32 32 56 97 45 126 -8 21 -46
+44 -60 36 -36 -21 -82 -12 -114 23 -41 45 -92 51 -125 15 -24 -26 -61 -37 -95
+-28 -25 6 -25 6 -25 -1534 l0 -1540 1222 2 1222 3 17 60 c55 191 50 261 -21
+270 -43 5 -51 20 -34 61 25 59 -9 106 -88 123 -97 22 -132 67 -184 231 -37
+118 -97 212 -135 212 -53 -1 -127 -10 -145 -18 -16 -8 -68 -10 -120 -5 -20 2
+-24 29 -9 65 17 39 12 61 -21 92 -15 15 -21 29 -17 43 3 11 0 34 -5 50 -12 33
+11 77 62 124 41 37 50 84 26 130 -20 37 -20 42 -6 86 25 75 31 199 13 243 -15
+35 -14 43 2 103 18 66 30 81 84 111 37 20 48 51 32 89 -6 17 -11 41 -11 55 2
+39 124 219 153 226 30 8 46 45 33 78 -10 26 -55 42 -89 31 -23 -7 -53 20 -47
+44 2 9 7 41 11 71 7 66 12 76 46 89 35 13 41 42 19 85 -27 49 15 165 55 150
+59 -23 102 57 76 142 -11 32 -25 81 -33 108 -17 63 -39 72 -104 42z"/>
+</g>
+<text class="kd-map__label kd-map__label--area" x="305.8" y="88.8">兵庫県</text>
+<text class="kd-map__label kd-map__label--area" x="888.4" y="319.2">大阪府</text>
+<text class="kd-map__label kd-map__label--area" x="771.9" y="839.5">和歌山県</text>
+<text class="kd-map__label kd-map__label--area" x="80.1" y="927.3">徳島県</text>
+<text class="kd-map__label kd-map__label--island" x="342.2" y="531.3">淡路島</text>
+<text class="kd-map__label kd-map__label--sea" x="597.1" y="407.7">大阪湾</text>
+<text class="kd-map__label kd-map__label--sea" x="138.4" y="381.2">播磨灘</text>
+<text class="kd-map__label kd-map__label--sea" x="429.6" y="821.9">紀伊水道</text>
+<g class="kd-map__spot" data-area="minoh" tabindex="0" role="button" aria-label="箕面の拠点を見る">
+<line class="kd-map__line" x1="830.0" y1="82" x2="826.7" y2="130.5" />
+<circle class="kd-map__pulse" cx="826.7" cy="130.5" r="20" />
+<circle class="kd-map__dot" cx="826.7" cy="130.5" r="11" />
+<rect class="kd-map__btn" x="740" y="18" width="180" height="64" rx="32" />
+<text class="kd-map__btn-text" x="830.0" y="61">箕面</text>
+</g>
+<g class="kd-map__spot" data-area="itami" tabindex="0" role="button" aria-label="伊丹の拠点を見る">
+<line class="kd-map__line" x1="590.0" y1="126" x2="767.1" y2="174.5" />
+<circle class="kd-map__pulse" cx="767.1" cy="174.5" r="20" />
+<circle class="kd-map__dot" cx="767.1" cy="174.5" r="11" />
+<rect class="kd-map__btn" x="500" y="62" width="180" height="64" rx="32" />
+<text class="kd-map__btn-text" x="590.0" y="105">伊丹</text>
+</g>
+<g class="kd-map__spot" data-area="nishinomiya" tabindex="0" role="button" aria-label="西宮の拠点を見る">
+<line class="kd-map__line" x1="560.0" y1="300" x2="718.5" y2="211.2" />
+<circle class="kd-map__pulse" cx="718.5" cy="211.2" r="20" />
+<circle class="kd-map__dot" cx="718.5" cy="211.2" r="11" />
+<rect class="kd-map__btn" x="470" y="300" width="180" height="64" rx="32" />
+<text class="kd-map__btn-text" x="560.0" y="343">西宮</text>
+</g>
+<g class="kd-map__spot" data-area="tokushima" tabindex="0" role="button" aria-label="徳島の拠点を見る">
+<line class="kd-map__line" x1="110.0" y1="654" x2="133.3" y2="764.0" />
+<circle class="kd-map__pulse" cx="133.3" cy="764.0" r="20" />
+<circle class="kd-map__dot" cx="133.3" cy="764.0" r="11" />
+<circle class="kd-map__pulse" cx="139.6" cy="829.4" r="20" />
+<circle class="kd-map__dot" cx="139.6" cy="829.4" r="11" />
+<circle class="kd-map__pulse" cx="98.4" cy="809.8" r="20" />
+<circle class="kd-map__dot" cx="98.4" cy="809.8" r="11" />
+<circle class="kd-map__pulse" cx="191.7" cy="897.0" r="20" />
+<circle class="kd-map__dot" cx="191.7" cy="897.0" r="11" />
+<rect class="kd-map__btn" x="20" y="590" width="180" height="64" rx="32" />
+<text class="kd-map__btn-text" x="110.0" y="633">徳島</text>
+</g>
+</svg>
+          <p class="kd-map__credit"><a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>をもとに作成</p>
+        </div>
+        <div class="kd-map__panel">
+          <ul class="kd-tabs" role="tablist">
+            <li><a class="kd-tabs__btn is-active" href="#kd-store-minoh" data-area="minoh" role="tab" aria-selected="true">箕面</a></li>
+            <li><a class="kd-tabs__btn" href="#kd-store-itami" data-area="itami" role="tab" aria-selected="false">伊丹</a></li>
+            <li><a class="kd-tabs__btn" href="#kd-store-nishinomiya" data-area="nishinomiya" role="tab" aria-selected="false">西宮</a></li>
+            <li><a class="kd-tabs__btn" href="#kd-store-tokushima" data-area="tokushima" role="tab" aria-selected="false">徳島</a></li>
+          </ul>
+
+          <div class="kd-store is-active" id="kd-store-minoh" data-area="minoh" role="tabpanel">
+            <img class="kd-store__img" src="../0001/smp/img/store-minoh.jpg" alt="KD'STYLE 箕面展示場のモデルハウス外観" width="900" height="600" />
+            <p class="kd-store__area">大阪府箕面市</p>
+            <p class="kd-store__name">KD'STYLE 箕面展示場</p>
+            <dl class="kd-store__info">
+              <div><dt>所在地</dt><dd>大阪府箕面市今宮1丁目1番1号<br />ABCハウジングウェルビーみのお内</dd></div>
+              <div><dt>営業時間</dt><dd>10:00〜17:00</dd></div>
+              <div><dt>定休日</dt><dd>毎週水曜日（祝祭日は除く）・年末年始</dd></div>
+              <div><dt>電話</dt><dd>072-735-7854</dd></div>
+            </dl>
+            <a class="kd-btn kd-btn--main kd-btn--block" href="https://suumo.jp/chumon/koumuten/rn_kenth/137671_0003_27/model/mc_001/">このモデルハウスを見る・予約する</a>
+          </div>
+
+          <div class="kd-store" id="kd-store-itami" data-area="itami" role="tabpanel">
+            <img class="kd-store__img" src="../0001/smp/img/store-itami.jpg" alt="伊丹まちかどモデルハウスの室内" width="900" height="600" />
+            <p class="kd-store__area">兵庫県伊丹市</p>
+            <p class="kd-store__name">伊丹まちかどモデルハウス<span>温度差が生まれないデザインハウス</span></p>
+            <dl class="kd-store__info">
+              <div><dt>所在地</dt><dd>兵庫県伊丹市船原1丁目</dd></div>
+              <div><dt>営業時間</dt><dd>10:00〜17:00</dd></div>
+              <div><dt>定休日</dt><dd>毎週水曜日・木曜日</dd></div>
+              <div><dt>電話</dt><dd>072-735-7854</dd></div>
+            </dl>
+            <a class="kd-btn kd-btn--main kd-btn--block" href="https://suumo.jp/chumon/koumuten/rn_kenth/model/">モデルハウス一覧から予約する</a>
+          </div>
+
+          <div class="kd-store" id="kd-store-nishinomiya" data-area="nishinomiya" role="tabpanel">
+            <img class="kd-store__img kd-store__img--small" src="../0001/smp/img/store-nishinomiya.jpg" alt="ケントホームズ関西支店の打ち合わせスペース" width="280" height="200" />
+            <p class="kd-store__area">兵庫県西宮市</p>
+            <p class="kd-store__name">ケントホームズ 関西支店</p>
+            <dl class="kd-store__info">
+              <div><dt>所在地</dt><dd>兵庫県西宮市中須佐町9-12<br />メルベーユ西宮1F</dd></div>
+              <div><dt>営業時間</dt><dd><em class="kd-todo">要確認</em></dd></div>
+              <div><dt>電話</dt><dd>0798-61-8888</dd></div>
+            </dl>
+            <a class="kd-btn kd-btn--main kd-btn--block" href="https://suumo.jp/chumon/koumuten/rn_kenth/model/">モデルハウス一覧から予約する</a>
+          </div>
+
+          <div class="kd-store" id="kd-store-tokushima" data-area="tokushima" role="tabpanel">
+            <p class="kd-store__area">徳島県</p>
+            <p class="kd-store__name">ケントホームズ 徳島の展示場</p>
+            <ul class="kd-tklist">
+              <li>
+                <img src="../0001/smp/img/store-tk-kitajima.jpg" alt="北島店（体験型ショールーム）の外観" width="900" height="600" />
+                <div><p class="kd-tklist__name">北島店（体験型ショールーム）</p><p class="kd-tklist__addr">板野郡北島町鯛浜字大西66-1</p></div>
+              </li>
+              <li>
+                <img src="../0001/smp/img/store-tk-minami.jpg" alt="徳島南店（ハウジングギャラリー）の街並み" width="900" height="600" />
+                <div><p class="kd-tklist__name">徳島南店（ハウジングギャラリー）</p><p class="kd-tklist__addr">徳島市八万町大野180-1</p></div>
+              </li>
+              <li>
+                <img src="../0001/smp/img/store-tk-meito.jpg" alt="徳島市名東町の凄断熱モデルハウス" width="900" height="600" />
+                <div><p class="kd-tklist__name"><a href="https://suumo.jp/chumon/koumuten/rn_kenth/137671_0001_36/model/mc_003/">【凄断熱】名東町モデルハウス</a></p><p class="kd-tklist__addr">徳島市名東町2丁目147番11</p></div>
+              </li>
+              <li>
+                <img src="../0001/smp/img/store-tk-anan.jpg" alt="阿南市羽ノ浦町の凄断熱モデルハウス" width="900" height="600" />
+                <div><p class="kd-tklist__name"><a href="https://suumo.jp/chumon/koumuten/rn_kenth/137671_0001_36/model/mc_005/">【凄断熱】阿南市羽ノ浦町モデルハウス</a></p><p class="kd-tklist__addr">阿南市羽ノ浦町宮倉前田13-5</p></div>
+              </li>
+            </ul>
+            <p class="kd-store__time">営業時間 10:00〜17:00（徳島南店は〜18:00）／定休日 毎週水曜日・木曜日（祝祭日は除く）・お盆・年末年始</p>
+            <a class="kd-btn kd-btn--main kd-btn--block" href="https://suumo.jp/chumon/koumuten/rn_kenth/model/">徳島のモデルハウスを見る・予約する</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. 会社・グループの裏付け -->
+  <div id="kd-about" class="kd-sec kd-sec--gray">
+    <div class="kd-inr">
+      <p class="kd-h-en kd-en">ABOUT</p>
+      <p class="kd-h">世界にひとつの家に、たどりつく。</p>
+      <div class="kd-about">
+        <div class="kd-about__img"><img src="../0001/smp/img/about.jpg" alt="KD'STYLEの家で暮らすご家族" width="920" height="700" /></div>
+        <div class="kd-about__body">
+          <p class="kd-text">あなたが思い描いている理想の暮らしが、建築家によって整えられ、設計図に落とし込まれながら、本物のデザイン、世界にひとつの家にたどりつく。それが“KD'STYLE”の注文住宅です。</p>
+          <p class="kd-text">一級建築士、インテリアコーディネーター、現場監督など各分野のプロがワンチームとなり、資金計画・土地探しから設計・施工・アフターまで、トータルでサポートします。</p>
+        </div>
+      </div>
+      <ul class="kd-trust">
+        <li><p class="kd-trust__big">最長<span class="kd-en">60</span>年</p><p class="kd-trust__text">60年サポートシステム<br /><small>※2020年10月以降のご契約が対象。適用されない商品プランもあります</small></p></li>
+        <li><p class="kd-trust__big">全棟</p><p class="kd-trust__text">許容応力度計算で<br />耐震等級3を確認</p></li>
+        <li><p class="kd-trust__big"><span class="kd-en">KENT HOMES</span></p><p class="kd-trust__text">ケンデザイン設計は<br />株式会社ケントホームズの事業部です</p></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 9. クロージング -->
+  <div class="kd-closing">
+    <p class="kd-closing__title">理想の家づくりは、<br class="kd-sp" />敷地を知ることから。</p>
+    <p class="kd-closing__text">箕面の展示場、伊丹のまちかどモデルハウスで、<br class="kd-pc" />建築家の設計と、数字で約束する性能を体感してください。</p>
+    <div class="kd-cta">
+      <a class="kd-btn kd-btn--main" href="https://suumo.jp/chumon/koumuten/rn_kenth/model/">展示場・モデルハウス見学を予約する</a>
+      <a class="kd-btn kd-btn--sub" href="#kd-stores" data-kd-jump>お近くの拠点を地図で探す</a>
+    </div>
+  </div>
+
+</div>
+<script src="../0001/smp/js/main.js"></script>
+</div>
+
+</div>
+</body></html>
