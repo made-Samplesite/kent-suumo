@@ -171,7 +171,6 @@
 #kosha_free .kd .kd-map__label { font-family: "Noto Serif JP", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", serif; font-weight: 600; text-anchor: middle; letter-spacing: .2em; }
 #kosha_free .kd .kd-map__label--area { fill: #c3b9a8; font-size: 30px; }
 #kosha_free .kd .kd-map__label--island { fill: #c3b9a8; font-size: 24px; }
-#kosha_free .kd .kd-map__label--sea { fill: #9dbdd3; font-size: 26px; font-weight: 500; letter-spacing: .4em; }
 #kosha_free .kd .kd-map__credit { margin-top: 4px; font-size: 10px; color: var(--kd-sub); text-align: right !important; }
 #kosha_free .kd .kd-map__credit a { color: var(--kd-sub) !important; }
 #kosha_free .kd .kd-map__spot { cursor: pointer; outline: none; }
